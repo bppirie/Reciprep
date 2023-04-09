@@ -49,11 +49,42 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\icons8_calendar.png" />
+	  <None Remove="Resources\Images\icons8_search.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\" />
+	  <Folder Include="ViewModel\Recipes\" />
+	  <Folder Include="ViewModel\Plan\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Explore\ExplorePage.xaml.cs">
+	    <DependentUpon>ExplorePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Plan\PlanPage.xaml.cs">
+	    <DependentUpon>PlanPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Recipes\RecipesPage.xaml.cs">
+	    <DependentUpon>RecipesPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Explore\ExplorePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Plan\PlanPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Recipes\RecipesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

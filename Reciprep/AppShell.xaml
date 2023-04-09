@@ -4,11 +4,27 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Reciprep"
+    xmlns:recipes="clr-namespace:Reciprep.Pages.RecipesPage"
+    xmlns:plan="clr-namespace:Reciprep.Pages.PlanPage"
+    xmlns:explore="clr-namespace:Reciprep.Pages.ExplorePage"
     Shell.FlyoutBehavior="Disabled">
+    <!-- Include the namespaces above to access the pages -->
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- This started in the default app, leaving for reference
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />-->
+    
+    
+    <!-- This will be the tabs at the bottom of the app -->
+    <TabBar>
+        <ShellContent Title="Recipes" 
+                      ContentTemplate="{DataTemplate recipes:RecipesPage}"
+                      Icon="icons8_cookbook.png"/>
+        <ShellContent Title="Plan" 
+                      ContentTemplate="{DataTemplate plan:PlanPage}"
+                      Icon="icons8_calendar.png"/>
+        <ShellContent Title="Explore"
+                      ContentTemplate="{DataTemplate explore:ExplorePage}"
+                      Icon="icons8_search.png"/>
+    </TabBar>
 
 </Shell>

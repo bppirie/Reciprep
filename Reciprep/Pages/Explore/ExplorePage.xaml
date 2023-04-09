@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reciprep.Pages.ExplorePage.ExplorePage"
+             xmlns:viewmodel="clr-namespace:Reciprep.ViewModel.Explore"
+             x:DataType="viewmodel:ExploreViewModel"
+             Title="Explore">
+
+    <Grid ColumnDefinitions="100*,15*" RowDefinitions="50, *" ColumnSpacing="10" RowSpacing="10">
+
+
+        <BoxView Color="{StaticResource Gray600}" CornerRadius="15" Margin="10,10,0,10"></BoxView>
+        <SearchBar TextColor="{StaticResource White}" Placeholder="Search . . ." CancelButtonColor="White" Handler="ExploreSearchHander" Text="{Binding SearchText}"></SearchBar>
+        <BoxView Color="SpringGreen" Grid.Column="1"></BoxView>
+        <BoxView Color="Orange" Grid.Row="1" Grid.ColumnSpan="2"></BoxView>
+        
+        <!--<VerticalStackLayout Grid.Row="1" BackgroundColor="Yellow">
+            <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        </VerticalStackLayout>-->
+
+    </Grid>
+    
+</ContentPage>
